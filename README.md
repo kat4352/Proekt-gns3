@@ -4,6 +4,7 @@
 <img width="675" height="812" alt="image" src="https://github.com/user-attachments/assets/1aecd65c-aeeb-4b66-9f40-1d3ea56cc029" />
 
 топология сети
+
 Изначально предполагалось реализовывать проет используя L2 и L3 коомутаторы, но выяснилось, что образ для L3 коммутатора выполняет функцию простого роутера, по большее части именно этим обусловлен выбор технологии router-on-a-stick. То есть в итоге в проекте используются L2 коммутатор(ASW1) и роутеры (DSW1, DSW2, R1).
 
 <img width="678" height="399" alt="image" src="https://github.com/user-attachments/assets/e345d6f3-5516-410e-9db9-95bc278b1b95" />
