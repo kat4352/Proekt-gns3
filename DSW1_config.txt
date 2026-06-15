@@ -1,0 +1,36 @@
+hostname DSW1
+ip routing
+no ip domain-lookup
+!
+interface gi0/0
+ no ip address
+ no shutdown
+exit
+!
+interface gi0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.2 255.255.255.0
+ standby 10 ip 192.168.10.1
+ standby 10 priority 110
+ standby 10 preempt
+exit
+!
+interface gi0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.2 255.255.255.0
+ standby 20 ip 192.168.20.1
+ standby 20 priority 110
+ standby 20 preempt
+exit
+!
+interface gi0/2
+ ip address 10.1.1.2 255.255.255.252
+ no shutdown
+exit
+!
+router ospf 1
+ router-id 1.1.1.1
+ network 10.1.1.0 0.0.0.3 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+exit
