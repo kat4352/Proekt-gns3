@@ -1,0 +1,19 @@
+hostname R1
+ip routing
+no ip domain-lookup
+!
+interface FastEthernet0/0
+ ip address 10.1.1.1 255.255.255.252
+ no shutdown
+exit
+!
+interface FastEthernet0/1
+ ip address 10.2.2.1 255.255.255.252
+ no shutdown
+exit
+!
+router ospf 1
+ router-id 3.3.3.3
+ network 10.1.1.0 0.0.0.3 area 0
+ network 10.2.2.0 0.0.0.3 area 0
+exit
