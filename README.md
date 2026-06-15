@@ -7,6 +7,9 @@
 * **Оборудование:** Cisco vIOS-Router, Cisco vIOS-L2
 * **Протоколы и технологии:** VLAN (IEEE 802.1Q), Router-on-a-Stick, HSRP, OSPF, NAT
 
+  <img width="700" height="772" alt="image" src="https://github.com/user-attachments/assets/e5ec5243-de4c-4f14-89c6-d965e2c7569f" />
+
+
 ## 📊 План адресации (Addressing Plan)
 | Устройство | Интерфейс / Порт | Назначение / Роль | IP-адрес | Маска подсети |
 | :--- | :--- | :--- | :--- | :--- |
